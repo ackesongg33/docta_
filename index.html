@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para la mujer más hermosa ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap');
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+height:100vh;
+overflow:hidden;
+
+background:
+radial-gradient(circle at center,#3a2600 0%,#090909 55%,#000 100%);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-family:Poppins;
+
+}
+
+
+
+/* Fondo partículas */
+
+.star{
+
+position:absolute;
+
+width:3px;
+height:3px;
+
+background:#fff;
+
+border-radius:50%;
+
+animation:shine 3s infinite;
+
+}
+
+
+@keyframes shine{
+
+50%{
+opacity:.15;
+}
+
+}
+
+
+
+/* Luz dorada */
+
+.aurora{
+
+position:absolute;
+
+width:450px;
+height:450px;
+
+background:#ffd700;
+
+filter:blur(140px);
+
+opacity:.15;
+
+animation:pulse 5s infinite;
+
+}
+
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.3);
+opacity:.35;
+}
+
+}
+
+
+
+/* Escena */
+
+.scene{
+
+width:100%;
+height:100%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+}
+
+
+
+/* botón */
+
+.start{
+
+position:absolute;
+
+z-index:50;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+linear-gradient(45deg,#ffd166,#fff0a8);
+
+font-size:20px;
+
+font-weight:bold;
+
+color:#5b3900;
+
+cursor:pointer;
+
+box-shadow:
+
+0 0 40px #ffd166;
+
+transition:.5s;
+
+}
+
+
+.start:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+
+/* Caja */
+
+.gift{
+
+position:absolute;
+
+bottom:180px;
+
+opacity:0;
+
+transform:scale(.7);
+
+transition:2s;
+
+}
+
+
+.open .gift{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+
+
+.box{
+
+width:260px;
+
+height:180px;
+
+background:
+
+linear-gradient(
+135deg,
+#9b001b,
+#ff476f
+);
+
+border-radius:15px;
+
+position:relative;
+
+box-shadow:
+
+0 40px 80px #000;
+
+}
+
+
+
+/* cintas */
+
+.ribbon-v{
+
+position:absolute;
+
+width:45px;
+
+height:180px;
+
+background:#ffd166;
+
+left:108px;
+
+}
+
+
+.ribbon-h{
+
+position:absolute;
+
+width:260px;
+
+height:40px;
+
+background:#ffd166;
+
+top:70px;
+
+}
+
+
+
+
+/* tapa */
+
+.lid{
+
+position:absolute;
+
+width:280px;
+
+height:60px;
+
+background:
+
+linear-gradient(
+135deg,
+#ff758f,
+#d00035
+);
+
+left:-10px;
+
+top:-55px;
+
+border-radius:15px;
+
+transform-origin:bottom;
+
+transition:2s;
+
+z-index:5;
+
+}
+
+
+.open .lid{
+
+transform:
+
+rotateX(80deg)
+translateY(-70px);
+
+}
+
+
+
+
+/* Luz que sale */
+
+.light{
+
+position:absolute;
+
+width:300px;
+
+height:300px;
+
+background:#ffd700;
+
+filter:blur(80px);
+
+opacity:0;
+
+transition:2s;
+
+}
+
+
+.open .light{
+
+opacity:.6;
+
+}
+
+
+
+/* flores */
+
+.flower{
+
+position:absolute;
+
+bottom:170px;
+
+opacity:0;
+
+transform:translateY(100px);
+
+}
+
+
+
+.open .flower{
+
+opacity:1;
+
+transform:translateY(-280px);
+
+transition:3s;
+
+}
+
+
+
+/* SVG flor */
+
+svg{
+
+filter:
+
+drop-shadow(
+0 0 15px #ffd700
+);
+
+}
+
+
+
+.petalo{
+
+fill:#ffd400;
+
+stroke:#e5a900;
+
+stroke-width:2;
+
+}
+
+
+
+.center{
+
+fill:#8b5200;
+
+}
+
+
+
+.stem{
+
+stroke:#3b8d2d;
+
+stroke-width:8;
+
+stroke-linecap:round;
+
+}
+
+
+
+/* posiciones */
+
+.flower1{
+left:-170px;
+}
+
+.flower2{
+left:-60px;
+}
+
+.flower3{
+left:50px;
+}
+
+.flower4{
+left:160px;
+}
+
+/* ==========================
+   CARTA FINAL
+========================== */
+
+.letter{
+
+position:absolute;
+
+bottom:35px;
+
+width:430px;
+
+padding:35px;
+
+background:
+
+linear-gradient(
+145deg,
+rgba(255,255,255,.95),
+rgba(255,245,210,.95)
+);
+
+border-radius:25px;
+
+text-align:center;
+
+opacity:0;
+
+transform:translateY(100px);
+
+transition:2.5s;
+
+box-shadow:
+
+0 0 60px rgba(255,215,0,.5);
+
+z-index:20;
+
+}
+
+
+.open .letter{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+
+.letter h1{
+
+font-family:"Great Vibes";
+
+font-size:55px;
+
+color:#c58b00;
+
+}
+
+
+
+.letter p{
+
+margin-top:20px;
+
+font-size:20px;
+
+line-height:1.6;
+
+color:#333;
+
+}
+
+
+
+.heart{
+
+font-size:45px;
+
+animation:heart 1.5s infinite;
+
+}
+
+
+@keyframes heart{
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+}
+
+
+
+/* pétalos flotando */
+
+
+.petal{
+
+position:absolute;
+
+color:#ffd166;
+
+font-size:25px;
+
+animation:fall 8s infinite linear;
+
+}
+
+
+@keyframes fall{
+
+
+from{
+
+transform:
+
+translateY(-100px)
+rotate(0deg);
+
+}
+
+
+to{
+
+transform:
+
+translateY(900px)
+rotate(360deg);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="scene">
+
+
+<div class="aurora"></div>
+
+
+<button class="start" onclick="openGift()">
+
+Abrir mi regalo ❤️
+
+</button>
+
+
+
+<div class="light"></div>
+
+
+
+<div class="gift">
+
+
+<div class="flower flower1">
+
+<svg width="120" height="120">
+
+<circle class="petalo" cx="60" cy="20" r="25"/>
+<circle class="petalo" cx="100" cy="60" r="25"/>
+<circle class="petalo" cx="60" cy="100" r="25"/>
+<circle class="petalo" cx="20" cy="60" r="25"/>
+
+<circle class="center" cx="60" cy="60" r="22"/>
+
+</svg>
+
+</div>
+
+
+
+<div class="flower flower2">
+
+<svg width="120" height="120">
+
+<circle class="petalo" cx="60" cy="20" r="25"/>
+<circle class="petalo" cx="100" cy="60" r="25"/>
+<circle class="petalo" cx="60" cy="100" r="25"/>
+<circle class="petalo" cx="20" cy="60" r="25"/>
+
+<circle class="center" cx="60" cy="60" r="22"/>
+
+</svg>
+
+</div>
+
+
+
+<div class="flower flower3">
+
+<svg width="120" height="120">
+
+<circle class="petalo" cx="60" cy="20" r="25"/>
+<circle class="petalo" cx="100" cy="60" r="25"/>
+<circle class="petalo" cx="60" cy="100" r="25"/>
+<circle class="petalo" cx="20" cy="60" r="25"/>
+
+<circle class="center" cx="60" cy="60" r="22"/>
+
+</svg>
+
+</div>
+
+
+
+<div class="flower flower4">
+
+<svg width="120" height="120">
+
+<circle class="petalo" cx="60" cy="20" r="25"/>
+<circle class="petalo" cx="100" cy="60" r="25"/>
+<circle class="petalo" cx="60" cy="100" r="25"/>
+<circle class="petalo" cx="20" cy="60" r="25"/>
+
+<circle class="center" cx="60" cy="60" r="22"/>
+
+</svg>
+
+</div>
+
+
+
+
+<div class="box">
+
+<div class="ribbon-v"></div>
+
+<div class="ribbon-h"></div>
+
+<div class="lid"></div>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="letter">
+
+
+<div class="heart">
+❤️
+</div>
+
+
+<h1>
+Para ti...
+</h1>
+
+
+<p>
+
+<strong>
+Para la mujer y doctora más hermosa del mundo
+</strong>
+
+<br><br>
+
+Gracias por llegar a mi vida,
+por tu amor, tu paciencia y por hacer
+cada día más especial.
+
+<br><br>
+
+<b>
+Te amo con toda mi alma 🌻
+</b>
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script>
+
+
+// estrellas
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"%";
+
+star.style.top=Math.random()*100+"%";
+
+star.style.animationDelay=
+Math.random()*3+"s";
+
+document.body.appendChild(star);
+
+}
+
+
+
+// pétalos
+
+for(let i=0;i<35;i++){
+
+let petal=document.createElement("div");
+
+petal.className="petal";
+
+petal.innerHTML="✦";
+
+petal.style.left=Math.random()*100+"%";
+
+petal.style.animationDelay=
+Math.random()*8+"s";
+
+document.body.appendChild(petal);
+
+}
+
+
+
+function openGift(){
+
+
+document.querySelector(".scene")
+.classList.add("open");
+
+
+document.querySelector(".start")
+.style.display="none";
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
