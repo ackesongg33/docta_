@@ -1,382 +1,276 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Para la mujer más hermosa ❤️</title>
+<title>Para la doctora más hermosa ❤️</title>
 
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
 
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
 body{
 
-height:100vh;
-overflow:hidden;
+    width:100%;
+    height:100vh;
 
-background:
-radial-gradient(circle at center,#3a2600 0%,#090909 55%,#000 100%);
+    overflow:hidden;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    background:
+    radial-gradient(circle at center,
+    #4b3500 0%,
+    #120d00 35%,
+    #000 80%);
 
-font-family:Poppins;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-}
-
-
-
-/* Fondo partículas */
-
-.star{
-
-position:absolute;
-
-width:3px;
-height:3px;
-
-background:#fff;
-
-border-radius:50%;
-
-animation:shine 3s infinite;
-
-}
-
-
-@keyframes shine{
-
-50%{
-opacity:.15;
-}
+    font-family:Poppins;
 
 }
 
 
 
-/* Luz dorada */
-
-.aurora{
-
-position:absolute;
-
-width:450px;
-height:450px;
-
-background:#ffd700;
-
-filter:blur(140px);
-
-opacity:.15;
-
-animation:pulse 5s infinite;
-
-}
-
-
-@keyframes pulse{
-
-50%{
-transform:scale(1.3);
-opacity:.35;
-}
-
-}
-
-
-
-/* Escena */
+/* ESCENA VERTICAL */
 
 .scene{
 
-width:100%;
-height:100%;
+    width:390px;
+    height:850px;
 
-display:flex;
+    position:relative;
 
-align-items:center;
+    overflow:hidden;
 
-justify-content:center;
+    background:
 
-position:relative;
-
-}
-
-
-
-/* botón */
-
-.start{
-
-position:absolute;
-
-z-index:50;
-
-padding:18px 45px;
-
-border:none;
-
-border-radius:50px;
-
-background:
-linear-gradient(45deg,#ffd166,#fff0a8);
-
-font-size:20px;
-
-font-weight:bold;
-
-color:#5b3900;
-
-cursor:pointer;
-
-box-shadow:
-
-0 0 40px #ffd166;
-
-transition:.5s;
-
-}
-
-
-.start:hover{
-
-transform:scale(1.1);
+    linear-gradient(
+    to bottom,
+    rgba(255,255,255,.03),
+    transparent
+    );
 
 }
 
 
 
 
-/* Caja */
-
-.gift{
-
-position:absolute;
-
-bottom:180px;
-
-opacity:0;
-
-transform:scale(.7);
-
-transition:2s;
-
-}
+/* LUZ DETRÁS DEL RAMO */
 
 
-.open .gift{
+.gold-light{
 
-opacity:1;
+    position:absolute;
 
-transform:scale(1);
+    width:350px;
+    height:350px;
+
+    top:230px;
+    left:20px;
+
+
+    background:#ffd700;
+
+    filter:blur(120px);
+
+    opacity:.25;
 
 }
 
 
 
 
-.box{
+/* ESTRELLAS */
 
-width:260px;
 
-height:180px;
+.star{
 
-background:
+    position:absolute;
 
-linear-gradient(
-135deg,
-#9b001b,
-#ff476f
-);
+    width:3px;
+    height:3px;
 
-border-radius:15px;
+    background:white;
 
-position:relative;
+    border-radius:50%;
 
-box-shadow:
-
-0 40px 80px #000;
+    animation:twinkle 3s infinite;
 
 }
 
 
 
-/* cintas */
+@keyframes twinkle{
 
-.ribbon-v{
-
-position:absolute;
-
-width:45px;
-
-height:180px;
-
-background:#ffd166;
-
-left:108px;
-
-}
-
-
-.ribbon-h{
-
-position:absolute;
-
-width:260px;
-
-height:40px;
-
-background:#ffd166;
-
-top:70px;
+    50%{
+        opacity:.2;
+        transform:scale(.5);
+    }
 
 }
 
 
 
 
-/* tapa */
+/* PARTÍCULAS DORADAS */
 
-.lid{
 
-position:absolute;
+.spark{
 
-width:280px;
+    position:absolute;
 
-height:60px;
+    width:5px;
+    height:5px;
 
-background:
+    background:#ffd166;
 
-linear-gradient(
-135deg,
-#ff758f,
-#d00035
-);
+    border-radius:50%;
 
-left:-10px;
+    box-shadow:
+    0 0 15px #ffd166;
 
-top:-55px;
-
-border-radius:15px;
-
-transform-origin:bottom;
-
-transition:2s;
-
-z-index:5;
+    animation:
+    float 8s infinite linear;
 
 }
 
 
-.open .lid{
+
+@keyframes float{
+
+
+0%{
 
 transform:
-
-rotateX(80deg)
-translateY(-70px);
-
-}
-
-
-
-
-/* Luz que sale */
-
-.light{
-
-position:absolute;
-
-width:300px;
-
-height:300px;
-
-background:#ffd700;
-
-filter:blur(80px);
+translateY(900px)
+rotate(0deg);
 
 opacity:0;
 
-transition:2s;
-
 }
 
 
-.open .light{
-
-opacity:.6;
-
-}
-
-
-
-/* flores */
-
-.flower{
-
-position:absolute;
-
-bottom:170px;
-
-opacity:0;
-
-transform:translateY(100px);
-
-}
-
-
-
-.open .flower{
+20%{
 
 opacity:1;
 
-transform:translateY(-280px);
+}
 
-transition:3s;
+
+100%{
+
+transform:
+translateY(-200px)
+rotate(360deg);
+
+opacity:0;
+
+}
+
 
 }
 
 
 
-/* SVG flor */
 
-svg{
 
-filter:
+/* ZONA DEL RAMO */
 
-drop-shadow(
-0 0 15px #ffd700
-);
+
+.bouquet-area{
+
+
+    position:absolute;
+
+    width:100%;
+
+    height:520px;
+
+    bottom:170px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
 
 }
 
 
 
-.petalo{
 
-fill:#ffd400;
 
-stroke:#e5a900;
+/* BASE DEL RAMO */
 
-stroke-width:2;
+
+.wrapper{
+
+
+    position:absolute;
+
+    bottom:0;
+
+    width:230px;
+
+    height:150px;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #f6dfc1,
+    #c89b6a
+    );
+
+
+    clip-path:
+
+    polygon(
+    50% 0,
+    100% 100%,
+    0 100%
+    );
+
+
+    box-shadow:
+
+    0 0 30px rgba(255,215,120,.4);
+
 
 }
 
 
 
-.center{
 
-fill:#8b5200;
+
+
+/* TALLOS */
+
+
+.stems{
+
+
+    position:absolute;
+
+    bottom:90px;
+
+    width:20px;
+
+    height:250px;
 
 }
 
@@ -384,127 +278,237 @@ fill:#8b5200;
 
 .stem{
 
-stroke:#3b8d2d;
+    position:absolute;
 
-stroke-width:8;
+    width:8px;
 
-stroke-linecap:round;
+    height:0;
 
-}
+    background:
 
+    linear-gradient(
+    to top,
+    #1b5e20,
+    #66bb6a
+    );
 
+    border-radius:20px;
 
-/* posiciones */
+    bottom:0;
 
-.flower1{
-left:-170px;
-}
-
-.flower2{
-left:-60px;
-}
-
-.flower3{
-left:50px;
-}
-
-.flower4{
-left:160px;
-}
-
-/* ==========================
-   CARTA FINAL
-========================== */
-
-.letter{
-
-position:absolute;
-
-bottom:35px;
-
-width:430px;
-
-padding:35px;
-
-background:
-
-linear-gradient(
-145deg,
-rgba(255,255,255,.95),
-rgba(255,245,210,.95)
-);
-
-border-radius:25px;
-
-text-align:center;
-
-opacity:0;
-
-transform:translateY(100px);
-
-transition:2.5s;
-
-box-shadow:
-
-0 0 60px rgba(255,215,0,.5);
-
-z-index:20;
-
-}
-
-
-.open .letter{
-
-opacity:1;
-
-transform:translateY(0);
+    animation:
+    grow 3s forwards;
 
 }
 
 
 
-.letter h1{
+@keyframes grow{
 
-font-family:"Great Vibes";
+    to{
 
-font-size:55px;
+    height:230px;
 
-color:#c58b00;
-
-}
-
-
-
-.letter p{
-
-margin-top:20px;
-
-font-size:20px;
-
-line-height:1.6;
-
-color:#333;
+    }
 
 }
 
 
 
-.heart{
 
-font-size:45px;
+/* POSICIONES DE TALLOS */
 
-animation:heart 1.5s infinite;
+
+.s1{
+left:-45px;
+transform:rotate(-15deg);
+animation-delay:.5s;
+}
+
+
+.s2{
+left:-15px;
+transform:rotate(-7deg);
+animation-delay:.8s;
+}
+
+
+.s3{
+left:15px;
+transform:rotate(5deg);
+animation-delay:1s;
+}
+
+
+.s4{
+left:45px;
+transform:rotate(15deg);
+animation-delay:1.3s;
+}
+
+
+
+
+
+/* CONTENEDOR DE FLORES */
+
+
+.flowers{
+
+
+    position:absolute;
+
+    bottom:300px;
+
+    width:300px;
+
+    height:220px;
+
+    left:45px;
 
 }
 
 
-@keyframes heart{
+/* =========================
+   ANIMACIÓN DEL RAMO
+========================= */
+
+
+.flower{
+
+    animation:
+    aparecerFlor 2s ease forwards,
+    balanceo 5s ease-in-out infinite;
+
+}
+
+
+@keyframes aparecerFlor{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        scale(.2)
+        translateY(120px);
+
+        filter:blur(10px);
+
+    }
+
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        scale(1)
+        translateY(0);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+
+@keyframes balanceo{
+
+
+    0%,100%{
+
+        rotate:0deg;
+
+    }
+
+
+    50%{
+
+        rotate:3deg;
+
+    }
+
+}
+
+
+
+
+.stem{
+
+    animation:
+
+    crecerTallo 3s ease forwards,
+    moverTallo 4s ease-in-out infinite;
+
+}
+
+
+
+@keyframes crecerTallo{
+
+
+from{
+
+height:0;
+
+}
+
+
+to{
+
+height:230px;
+
+}
+
+
+}
+
+
+
+
+@keyframes moverTallo{
+
 
 50%{
 
-transform:scale(1.25);
+transform:
+
+rotate(2deg);
 
 }
+
+}
+
+
+
+
+/* brillo de flores */
+
+.flower svg{
+
+animation:
+
+brilloFlor 3s infinite;
+
+}
+
+
+
+@keyframes brilloFlor{
+
+
+50%{
+
+filter:
+
+drop-shadow(
+0 0 30px #ffe066
+);
+
+}
+
 
 }
 
@@ -513,45 +517,61 @@ transform:scale(1.25);
 /* pétalos flotando */
 
 
-.petal{
+.falling-petal{
+
 
 position:absolute;
 
-color:#ffd166;
+font-size:28px;
 
-font-size:25px;
+color:#ffd84d;
 
-animation:fall 8s infinite linear;
+animation:
+
+caerPetalo 8s linear infinite;
+
 
 }
 
 
-@keyframes fall{
+
+@keyframes caerPetalo{
 
 
-from{
+0%{
 
 transform:
 
-translateY(-100px)
+translateY(-50px)
 rotate(0deg);
+
+opacity:0;
 
 }
 
 
-to{
+20%{
+
+opacity:1;
+
+}
+
+
+100%{
 
 transform:
 
 translateY(900px)
 rotate(360deg);
 
-}
+opacity:0;
 
 }
 
 
+}
 </style>
+
 
 </head>
 
@@ -562,85 +582,60 @@ rotate(360deg);
 <div class="scene">
 
 
-<div class="aurora"></div>
+<div class="gold-light"></div>
 
 
-<button class="start" onclick="openGift()">
-
-Abrir mi regalo ❤️
-
-</button>
+<div class="bouquet-area">
 
 
+<div class="flowers">
 
-<div class="light"></div>
-
-
-
-<div class="gift">
+<!-- AQUÍ IRÁN LAS FLORES EN LA PARTE 2 -->
 
 
-<div class="flower flower1">
-
-<svg width="120" height="120">
-
-<circle class="petalo" cx="60" cy="20" r="25"/>
-<circle class="petalo" cx="100" cy="60" r="25"/>
-<circle class="petalo" cx="60" cy="100" r="25"/>
-<circle class="petalo" cx="20" cy="60" r="25"/>
-
-<circle class="center" cx="60" cy="60" r="22"/>
-
-</svg>
-
-</div>
+<!-- FLORES DEL RAMO -->
 
 
 
-<div class="flower flower2">
-
-<svg width="120" height="120">
-
-<circle class="petalo" cx="60" cy="20" r="25"/>
-<circle class="petalo" cx="100" cy="60" r="25"/>
-<circle class="petalo" cx="60" cy="100" r="25"/>
-<circle class="petalo" cx="20" cy="60" r="25"/>
-
-<circle class="center" cx="60" cy="60" r="22"/>
-
-</svg>
-
-</div>
+<div class="bouquet-area">
 
 
+    <div class="flowers">
+<div class="flower flower-a">
 
-<div class="flower flower3">
+<svg viewBox="0 0 200 200">
 
-<svg width="120" height="120">
+<!-- pétalos -->
+<g class="petals">
 
-<circle class="petalo" cx="60" cy="20" r="25"/>
-<circle class="petalo" cx="100" cy="60" r="25"/>
-<circle class="petalo" cx="60" cy="100" r="25"/>
-<circle class="petalo" cx="20" cy="60" r="25"/>
+<ellipse cx="100" cy="35" rx="28" ry="55"/>
+<ellipse cx="100" cy="165" rx="28" ry="55"/>
 
-<circle class="center" cx="60" cy="60" r="22"/>
+<ellipse cx="35" cy="100" rx="55" ry="28"/>
+<ellipse cx="165" cy="100" rx="55" ry="28"/>
 
-</svg>
+<ellipse cx="55" cy="55" rx="30" ry="50"
+transform="rotate(-45 55 55)"/>
 
-</div>
+<ellipse cx="145" cy="55" rx="30" ry="50"
+transform="rotate(45 145 55)"/>
+
+<ellipse cx="55" cy="145" rx="30" ry="50"
+transform="rotate(45 55 145)"/>
+
+<ellipse cx="145" cy="145" rx="30" ry="50"
+transform="rotate(-45 145 145)"/>
+
+</g>
 
 
+<!-- centro -->
 
-<div class="flower flower4">
+<circle class="flower-center"
+cx="100"
+cy="100"
+r="35"/>
 
-<svg width="120" height="120">
-
-<circle class="petalo" cx="60" cy="20" r="25"/>
-<circle class="petalo" cx="100" cy="60" r="25"/>
-<circle class="petalo" cx="60" cy="100" r="25"/>
-<circle class="petalo" cx="20" cy="60" r="25"/>
-
-<circle class="center" cx="60" cy="60" r="22"/>
 
 </svg>
 
@@ -649,119 +644,151 @@ Abrir mi regalo ❤️
 
 
 
-<div class="box">
+<div class="flower flower-b">
 
-<div class="ribbon-v"></div>
+<svg viewBox="0 0 200 200">
 
-<div class="ribbon-h"></div>
+<g class="petals">
 
-<div class="lid"></div>
+<ellipse cx="100" cy="35" rx="28" ry="55"/>
+<ellipse cx="100" cy="165" rx="28" ry="55"/>
 
-</div>
+<ellipse cx="35" cy="100" rx="55" ry="28"/>
+<ellipse cx="165" cy="100" rx="55" ry="28"/>
 
+<ellipse cx="55" cy="55" rx="30" ry="50"
+transform="rotate(-45 55 55)"/>
 
+<ellipse cx="145" cy="55" rx="30" ry="50"
+transform="rotate(45 145 55)"/>
 
-</div>
-
-
-
-<div class="letter">
-
-
-<div class="heart">
-❤️
-</div>
+</g>
 
 
-<h1>
-Para ti...
-</h1>
+<circle class="flower-center"
+cx="100"
+cy="100"
+r="35"/>
 
-
-<p>
-
-<strong>
-Para la mujer y doctora más hermosa del mundo
-</strong>
-
-<br><br>
-
-Gracias por llegar a mi vida,
-por tu amor, tu paciencia y por hacer
-cada día más especial.
-
-<br><br>
-
-<b>
-Te amo con toda mi alma 🌻
-</b>
-
-</p>
-
+</svg>
 
 </div>
 
 
 
+
+
+<div class="flower flower-c">
+
+<svg viewBox="0 0 200 200">
+
+
+<g class="petals">
+
+<ellipse cx="100" cy="35" rx="28" ry="55"/>
+<ellipse cx="100" cy="165" rx="28" ry="55"/>
+
+<ellipse cx="35" cy="100" rx="55" ry="28"/>
+<ellipse cx="165" cy="100" rx="55" ry="28"/>
+
+</g>
+
+
+<circle class="flower-center"
+cx="100"
+cy="100"
+r="35"/>
+
+
+</svg>
+
 </div>
 
+
+
+
+<div class="flower flower-d">
+
+<svg viewBox="0 0 200 200">
+
+<g class="petals">
+
+<ellipse cx="100" cy="35" rx="28" ry="55"/>
+<ellipse cx="100" cy="165" rx="28" ry="55"/>
+<ellipse cx="35" cy="100" rx="55" ry="28"/>
+<ellipse cx="165" cy="100" rx="55" ry="28"/>
+
+</g>
+
+
+<circle class="flower-center"
+cx="100"
+cy="100"
+r="35"/>
+
+
+</svg>
+</div>
+</div>
+
+
+<div class="stems">
+
+<div class="stem s1"></div>
+<div class="stem s2"></div>
+<div class="stem s3"></div>
+<div class="stem s4"></div>
+
+</div>
+
+
+<div class="wrapper"></div>
+
+
+</div>
+
+
+</div>
 
 
 <script>
 
 
+
 // estrellas
 
-for(let i=0;i<120;i++){
+for(let i=0;i<80;i++){
 
-let star=document.createElement("div");
+let s=document.createElement("div");
 
-star.className="star";
+s.className="star";
 
-star.style.left=Math.random()*100+"%";
+s.style.left=Math.random()*100+"%";
 
-star.style.top=Math.random()*100+"%";
+s.style.top=Math.random()*100+"%";
 
-star.style.animationDelay=
-Math.random()*3+"s";
-
-document.body.appendChild(star);
-
-}
-
-
-
-// pétalos
-
-for(let i=0;i<35;i++){
-
-let petal=document.createElement("div");
-
-petal.className="petal";
-
-petal.innerHTML="✦";
-
-petal.style.left=Math.random()*100+"%";
-
-petal.style.animationDelay=
-Math.random()*8+"s";
-
-document.body.appendChild(petal);
-
-}
-
-
-
-function openGift(){
-
+s.style.animationDelay=Math.random()*3+"s";
 
 document.querySelector(".scene")
-.classList.add("open");
+.appendChild(s);
+
+}
 
 
-document.querySelector(".start")
-.style.display="none";
+// partículas
 
+for(let i=0;i<30;i++){
+
+let p=document.createElement("div");
+
+p.className="spark";
+
+p.style.left=Math.random()*100+"%";
+
+p.style.animationDelay=Math.random()*8+"s";
+
+document.querySelector(".scene")
+.appendChild(p);
 
 }
 
